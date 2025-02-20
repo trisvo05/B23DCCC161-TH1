@@ -37,6 +37,19 @@
 		icon: 'ArrowsAltOutlined',
 	},
 
+	{
+		path: '/todolist',
+		name: 'Todolist',
+		component: './Todolist',
+		icon: 'CheckCircleOutlined',
+	},
+	{
+		path: '/trochoidoanso',
+		name: 'TroChoiDoanSo',
+		component: './trochoidoanso/trochoidoanso',
+		icon: 'QuestionCircleOutlined',
+	},
+
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
