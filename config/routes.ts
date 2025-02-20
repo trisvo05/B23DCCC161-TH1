@@ -1,4 +1,6 @@
-﻿export default [
+﻿import route from "mock/route";
+
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -30,26 +32,66 @@
 		component: './TienIch/GioiThieu',
 		hideInMenu: true,
 	},
+	// {
+	// 	path: '/gioi-thieu',
+	// 	name: 'About',
+	// 	hideInMenu: false,
+	// 	routes:
+	// 		[
+	// 			{
+	// 				path: '/abcde-f',
+	// 				name: 'About acd',
+	// 				component: './TienIch/GioiThieu',
+	// 			}
+	// 		]
+	// },
+	// {
+	// 	path: '/random-user',
+	// 	name: 'RandomUser',
+	// 	component: './RandomUser',
+	// 	icon: 'ArrowsAltOutlined',
+	// },
 	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
+		path: '/course',
+		name: 'Course',
+		component: './Course',
+		// component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
 	},
 
+
 	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
+	{
+		name: 'Quản lý học tập',
+		path: '/quan_ly_hoc_tap',
+		icon: 'copy',
+		routes: [
+			// {
+			// 	name: 'ChucVu',
+			// 	path: 'chuc-vu',
+			// 	component: './DanhMuc/ChucVu',
+			// },
+			{
+				name: 'Quản lý môn học',
+				path: 'mon_hoc',
+				component: './Course',
+			},
+			// {
+			// 	path: '/todolist',
+			// 	name: 'Todolist',
+			// 	component: './Todolist',
+			// 	icon: 'CheckCircleOutlined',
+			// },
+			{
+				path: 'trochoidoanso',
+				name: 'Trò chơi đoán số',
+				component: './trochoidoanso/trochoidoanso',
+				// icon: 'QuestionCircleOutlined',
+			},
+		
+		
+		],
+	},
 
 	{
 		path: '/notification',
