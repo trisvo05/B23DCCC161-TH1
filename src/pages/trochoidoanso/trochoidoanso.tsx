@@ -1,5 +1,5 @@
 import React , { useState } from 'react';
-
+import { Input, Button, Alert } from 'antd';
 const TroChoiDoanSo = () => {
 	const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 100) + 1);
 	const [guess, setGuess] = useState('');
@@ -48,40 +48,46 @@ const TroChoiDoanSo = () => {
 	};
 
 	// Giao diện trò chơi
-	return (
-		<div className='p-6 bg-gray-100 min-h-screen'>
-			<h1 className='text-3xl font-bold text-center'>Trò Chơi Đoán Số</h1>
-			<div className='flex justify-center my-4'>
-				<input
-					type='number'
-					value={guess}
-					onChange={(e) => setGuess(e.target.value)}
-					className='px-4 py-2 border rounded w-full mr-6px'
-					placeholder='Nhập số bạn đoán'
-					disabled={gameOver}
-				/>
-				<button
-					onClick={handleGuess}
-					className='ml-2 px-4 py-2 #FF0000 text-white rounded ml-6px'
-					disabled={gameOver}
-				>
-					Đoán
-				</button>
-			</div>
-			{error && <p className='text-red-500 text-center'>{error}</p>} {/*Thông báo lỗi khi nhập số*/}
-			<div className='text-center'>
-				<p>{message}</p>
-				{gameOver && (
-					<button onClick={handleReset} className='mt-4 px-4 py-2 bg-green-500 text-white rounded'>
-						Chơi lại
-					</button>
-				)}
-			</div>
-			<div className='text-center mt-4'>
-				<p>Lượt đoán: {attempt}/10</p>
-			</div>
-		</div>
-	);
+    return (
+        <div className="p-6 bg-gray-100 min-h-screen">
+          <h1 className="text-3xl font-bold text-center">Trò Chơi Đoán Số</h1>
+          <div className="flex justify-center my-4">
+            <Input
+              type="number"
+              value={guess}
+              onChange={(e) => setGuess(e.target.value)}
+              placeholder="Nhập số bạn đoán"
+              disabled={gameOver}
+              style={{ marginRight: '3px', width: '200px' }}
+            />
+            <Button
+              type="primary"
+              onClick={handleGuess}
+              disabled={gameOver}
+            >
+              Đoán
+            </Button>
+          </div>
+          {error && <Alert message={error} type="error" showIcon className="text-center" />}
+          <div className="text-center">
+            <p>{message}</p>
+            {gameOver && (
+              <Button
+                type="primary"
+                onClick={handleReset}
+                className="mt-4"
+              >
+                Chơi lại
+              </Button>
+        )}
+      </div>
+      <div className="text-center mt-4">
+        <p>Lượt đoán: {attempt}/10</p>
+      </div>
+    </div>
+  );
 };
 
 export default TroChoiDoanSo;
+
+
