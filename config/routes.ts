@@ -51,13 +51,7 @@ export default [
 	// 	component: './RandomUser',
 	// 	icon: 'ArrowsAltOutlined',
 	// },
-	{
-		path: '/course',
-		name: 'Course',
-		component: './Course',
-		// component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
-	},
+	
 
 
 	// DANH MUC HE THONG
@@ -82,13 +76,19 @@ export default [
 			// 	component: './Todolist',
 			// 	icon: 'CheckCircleOutlined',
 			// },
+			
+			{
+				path: 'muctieuhoctap',
+				name: 'Mục tiêu học tập',
+				component: './TodoList',
+				// icon: 'QuestionCircleOutlined',
+			},
 			{
 				path: 'trochoidoanso',
 				name: 'Trò chơi đoán số',
 				component: './trochoidoanso/trochoidoanso',
 				// icon: 'QuestionCircleOutlined',
 			},
-		
 		
 		],
 	},
