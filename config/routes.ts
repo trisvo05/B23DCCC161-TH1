@@ -68,7 +68,7 @@ export default [
 			{
 				name: 'Quản lý môn học',
 				path: 'mon_hoc',
-				component: './Course',
+				component: './Subject',
 			},
 			// {
 			// 	path: '/todolist',
